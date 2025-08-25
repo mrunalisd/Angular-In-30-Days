@@ -1,0 +1,29 @@
+<h2>{{ message }}</h2>
+
+<!-- Click event -->
+<button (click)="onClick()">Click Me</button>
+
+<!-- Input with event binding and $event -->
+<input 
+  type="text"
+  placeholder="Type here..."
+  (keyup.enter)="onKeyEnter($event)"
+  (change)="onChange($event)"
+  (focus)="onFocus()"
+  (blur)="onBlur()"
+  [(ngModel)]="username"
+/>
+
+<!-- Hover event -->
+<div 
+  (mouseenter)="onHover(true)" 
+  (mouseleave)="onHover(false)" 
+  style="margin-top:10px; padding:10px; border:1px solid #ccc; width:200px;">
+  Hover over me
+</div>
+
+<!-- Template Reference Variable -->
+<input type="text" #userRef placeholder="Template Ref Example" />
+<button (click)="logName(userRef.value)">Log Name</button>
+
+<p>Username via [(ngModel)] with getter/setter: {{ username }}</p>
