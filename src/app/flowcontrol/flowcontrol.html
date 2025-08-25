@@ -1,0 +1,36 @@
+<h1>Day 6 - If Else & Switch</h1>
+<!-- Input for marks -->
+<label>
+  Enter Marks:
+  <input type="number" [(ngModel)]="marks" />
+</label>
+
+<!-- If-Else Ladder using *ngIf -->
+<p *ngIf="marks >= 90; else checkB">Grade: A</p>
+<ng-template #checkB>
+  <p *ngIf="marks >= 75; else checkC">Grade: B</p>
+</ng-template>
+<ng-template #checkC>
+  <p *ngIf="marks >= 50; else fail">Grade: C</p>
+</ng-template>
+<ng-template #fail>
+  <p>Grade: Fail</p>
+</ng-template>
+
+<hr />
+
+<!-- Input for day -->
+<label>
+  Enter Day Number (1-7):
+  <input type="number" [(ngModel)]="day" />
+</label>
+
+<!-- Switch case using [ngSwitch] -->
+<div [ngSwitch]="day">
+  <p *ngSwitchCase="1">Monday</p>
+  <p *ngSwitchCase="2">Tuesday</p>
+  <p *ngSwitchCase="3">Wednesday</p>
+  <p *ngSwitchCase="4">Thursday</p>
+  <p *ngSwitchCase="5">Friday</p>
+  <p *ngSwitchDefault>Weekend</p>
+</div>
