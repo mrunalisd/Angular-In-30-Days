@@ -1,0 +1,18 @@
+<!-- app.component.html -->
+<h2>{{ title }}</h2>
+
+<!-- Two-way binding -->
+<input [(ngModel)]="newItem" placeholder="Enter item" />
+<button (click)="addItem()">Add</button>
+
+<ul>
+  <!-- Using *ngFor with contextual variables -->
+  <li *ngFor="let tech of items; let i = index; let first = first; let last = last; let even = even; let odd = odd">
+    {{ i + 1 }}. {{ tech }}
+    <span *ngIf="first">[First]</span>
+    <span *ngIf="last">[Last]</span>
+    <span *ngIf="even">[Even]</span>
+    <span *ngIf="odd">[Odd]</span>
+    <button (click)="removeItem(i)">Remove</button>
+  </li>
+</ul>

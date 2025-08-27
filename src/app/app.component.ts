@@ -7,10 +7,11 @@ import { Flowcontrol } from './flowcontrol/flowcontrol';
 import { Writablesignals } from "./writablesignals/writablesignals";
 import { Computedsignals } from "./computedsignals/computedsignals";
 import { EffectAngular } from "./effect-angular/effect-angular";
+import { TwoWayBinding } from "./two-way-binding/two-way-binding";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Writablesignals, Computedsignals, EffectAngular],
+  imports: [RouterOutlet, Writablesignals, Computedsignals, EffectAngular, TwoWayBinding],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   standalone: true
