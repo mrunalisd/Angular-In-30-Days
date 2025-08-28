@@ -8,10 +8,11 @@ import { Writablesignals } from "./writablesignals/writablesignals";
 import { Computedsignals } from "./computedsignals/computedsignals";
 import { EffectAngular } from "./effect-angular/effect-angular";
 import { TwoWayBinding } from "./two-way-binding/two-way-binding";
+import { DynamicStyling } from "./dynamic-styling/dynamic-styling";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Writablesignals, Computedsignals, EffectAngular, TwoWayBinding],
+  imports: [RouterOutlet, Writablesignals, Computedsignals, EffectAngular, TwoWayBinding, DynamicStyling],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   standalone: true

@@ -1,0 +1,19 @@
+<!-- dynamic-styling.component.html -->
+<div 
+  [ngClass]="{
+    'active-box': isActive,
+    'error-box': isError
+  }"
+  [ngStyle]="{
+    'font-size.px': fontSize,
+    'color': isError ? 'red' : 'green'
+  }">
+  Dynamic Styling in Action!
+</div>
+
+<!-- Static + dynamic classes together -->
+<p class="base-text" [ngClass]="['highlight', isActive ? 'bold' : 'italic']">
+  Mixed Static and Dynamic Classes
+</p>
+
+<button (click)="toggleState()">Toggle Style</button>

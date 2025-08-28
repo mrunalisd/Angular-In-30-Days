@@ -1,0 +1,7 @@
+
+.active-box { background-color: lightgreen; padding: 10px; }
+.error-box { border: 2px solid red; }
+.base-text { font-family: Arial; }
+.highlight { text-decoration: underline; }
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
