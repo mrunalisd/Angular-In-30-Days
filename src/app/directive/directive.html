@@ -1,0 +1,29 @@
+<h2>{{ title }}</h2>
+
+<!-- Attribute Directive: [(ngModel)] for two-way data binding -->
+<input [(ngModel)]="newStudentName" placeholder="Enter student name">
+<input [(ngModel)]="newStudentMarks" type="number" placeholder="Enter marks">
+<button (click)="addStudent()">Add Student</button>
+
+<!-- Toggle list using Structural Directive (*ngIf) -->
+<button (click)="toggleList()">
+  {{ showList ? 'Hide' : 'Show' }} Students
+</button>
+
+<!-- Structural Directive: *ngIf to conditionally render -->
+<div *ngIf="showList; else noData">
+  <ul>
+    <!-- Structural Directive: *ngFor to loop students -->
+    <li *ngFor="let student of students; index as i"
+        [ngClass]="{ 'pass': student.marks >= 50, 'fail': student.marks < 50 }"
+        [ngStyle]="{ 'color': getMarksColor(student.marks) }">
+      {{ i+1 }}. {{ student.name }} — {{ student.marks }} marks
+      <button (click)="removeStudent(i)">Remove</button>
+    </li>
+  </ul>
+</div>
+
+<!-- Template to show when no students exist -->
+<ng-template #noData>
+  <p>No students available. Add some above!</p>
+</ng-template>

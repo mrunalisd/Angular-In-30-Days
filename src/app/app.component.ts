@@ -9,10 +9,11 @@ import { Computedsignals } from "./computedsignals/computedsignals";
 import { EffectAngular } from "./effect-angular/effect-angular";
 import { TwoWayBinding } from "./two-way-binding/two-way-binding";
 import { DynamicStyling } from "./dynamic-styling/dynamic-styling";
+import { Directive } from "./directive/directive";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Writablesignals, Computedsignals, EffectAngular, TwoWayBinding, DynamicStyling],
+  imports: [RouterOutlet, Writablesignals, Computedsignals, EffectAngular, TwoWayBinding, DynamicStyling, Directive],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   standalone: true

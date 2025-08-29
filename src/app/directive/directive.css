@@ -1,0 +1,9 @@
+.pass {
+  font-weight: bold;
+}
+.fail {
+  text-decoration: line-through;
+}
+button {
+  margin-left: 8px;
+}
