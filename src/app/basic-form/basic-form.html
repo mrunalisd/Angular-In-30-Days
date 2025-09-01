@@ -1,0 +1,33 @@
+<h2>Basic User Form</h2>
+
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+  <div>
+    <label>Name:</label>
+    <input type="text" name="name" [(ngModel)]="user.name" required />
+    <div *ngIf="userForm.submitted && !user.name" style="color:red;">
+      Name is required
+    </div>
+  </div>
+
+  <div>
+    <label>Email:</label>
+    <input type="email" name="email" [(ngModel)]="user.email" required email />
+    <div *ngIf="userForm.submitted && !user.email" style="color:red;">
+      Email is required
+    </div>
+  </div>
+
+  <div>
+    <label>Password:</label>
+    <input type="password" name="password" [(ngModel)]="user.password" required minlength="6" />
+    <div *ngIf="userForm.submitted && user.password.length < 6" style="color:red;">
+      Password must be at least 6 characters
+    </div>
+  </div>
+
+  <button type="submit">Submit</button>
+</form>
+
+<h4>Name: {{ user.name }}</h4>
+<p>Email: {{ user.email }}</p>
+<p>Password: {{ user.password }}</p>
