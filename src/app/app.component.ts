@@ -12,16 +12,17 @@ import { DynamicStyling } from "./dynamic-styling/dynamic-styling";
 import { Directive } from "./directive/directive";
 import { FormsModule } from '@angular/forms';  
 import { BasicForm } from './basic-form/basic-form';
-import { CommonModule } from '@angular/common'; 
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AdvancedForm } from "./advanced-form/advanced-form";
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Writablesignals, Computedsignals, EffectAngular, TwoWayBinding, DynamicStyling, Directive, CommonModule, FormsModule, BasicForm],
+  imports: [RouterOutlet, Writablesignals, Computedsignals, EffectAngular, TwoWayBinding, DynamicStyling, Directive, CommonModule, FormsModule, BasicForm, ReactiveFormsModule, AdvancedForm],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   standalone: true
 })
 export class App {
-  
 }
