@@ -16,14 +16,19 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AdvancedForm } from "./advanced-form/advanced-form";
 import { TemplateDriven } from "./template-driven/template-driven";
+import { UserCard } from './user-card/user-card';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Writablesignals, Computedsignals, EffectAngular, TwoWayBinding, DynamicStyling, Directive, CommonModule, FormsModule, BasicForm, ReactiveFormsModule, AdvancedForm, TemplateDriven],
+  imports: [RouterOutlet, Writablesignals, Computedsignals, EffectAngular, TwoWayBinding, DynamicStyling, Directive, CommonModule, FormsModule, BasicForm, ReactiveFormsModule, AdvancedForm, TemplateDriven, UserCard],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   standalone: true
 })
 export class App {
+  dynamicUser = {
+    name: 'Charlie',
+    email: 'charlie@example.com'
+  };
 }
