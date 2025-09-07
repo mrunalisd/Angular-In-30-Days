@@ -17,11 +17,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AdvancedForm } from "./advanced-form/advanced-form";
 import { TemplateDriven } from "./template-driven/template-driven";
 import { UserCard } from './user-card/user-card';
+import { ChildComponent } from "./child-component/child-component";
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Writablesignals, Computedsignals, EffectAngular, TwoWayBinding, DynamicStyling, Directive, CommonModule, FormsModule, BasicForm, ReactiveFormsModule, AdvancedForm, TemplateDriven, UserCard],
+  imports: [RouterOutlet, Writablesignals, Computedsignals, EffectAngular, TwoWayBinding, DynamicStyling, Directive, CommonModule, FormsModule, BasicForm, ReactiveFormsModule, AdvancedForm, TemplateDriven, UserCard, ChildComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   standalone: true
@@ -31,4 +32,10 @@ export class App {
     name: 'Charlie',
     email: 'charlie@example.com'
   };
+
+  message: string = '';
+
+  receiveData(data: string) {
+    this.message = data;
+  }
 }

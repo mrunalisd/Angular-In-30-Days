@@ -19,8 +19,13 @@
 <app-advanced-form></app-advanced-form>
 
 <app-template-driven></app-template-driven>
--->
+
 <h2>User List</h2>
 <app-user-card name="Alice" email="alice@example.com"></app-user-card>
 <app-user-card name="Bob" email="bob@example.com"></app-user-card>
 <app-user-card [name]="dynamicUser.name" [email]="dynamicUser.email"></app-user-card>
+-->
+<h2>Parent Component</h2>
+<app-child-component (userEvent)="receiveData($event)"></app-child-component>
+
+<p>Message from Child: {{ message }}</p>
