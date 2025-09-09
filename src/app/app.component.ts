@@ -19,19 +19,20 @@ import { TemplateDriven } from "./template-driven/template-driven";
 import { UserCard } from './user-card/user-card';
 import { ChildComponent } from "./child-component/child-component";
 import { CustomPipes } from "./custom-pipes/custom-pipes";
+import { LifecycleDemoComponent } from "./lifecycle-demo-component/lifecycle-demo-component";
 
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, Writablesignals, Computedsignals, EffectAngular, TwoWayBinding, DynamicStyling, Directive, CommonModule, FormsModule, BasicForm, ReactiveFormsModule, AdvancedForm, TemplateDriven, UserCard,
-    ChildComponent, CustomPipes],
+    ChildComponent, CustomPipes, LifecycleDemoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   standalone: true
 })
 export class App {
 
-  message: string = '';
+  message: string = 'Hello';
 
   receiveData(data: string) {
     this.message = data;
