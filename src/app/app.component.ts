@@ -20,12 +20,14 @@ import { UserCard } from './user-card/user-card';
 import { ChildComponent } from "./child-component/child-component";
 import { CustomPipes } from "./custom-pipes/custom-pipes";
 import { LifecycleDemoComponent } from "./lifecycle-demo-component/lifecycle-demo-component";
+import { ProductListComponent } from "./product-list-component/product-list-component";
+
 
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, Writablesignals, Computedsignals, EffectAngular, TwoWayBinding, DynamicStyling, Directive, CommonModule, FormsModule, BasicForm, ReactiveFormsModule, AdvancedForm, TemplateDriven, UserCard,
-    ChildComponent, CustomPipes, LifecycleDemoComponent],
+    ChildComponent, CustomPipes, LifecycleDemoComponent, ProductListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   standalone: true
