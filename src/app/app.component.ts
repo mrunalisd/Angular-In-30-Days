@@ -23,7 +23,6 @@ import { LifecycleDemoComponent } from "./lifecycle-demo-component/lifecycle-dem
 import { ProductListComponent } from "./product-list-component/product-list-component";
 
 
-
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, Writablesignals, Computedsignals, EffectAngular, TwoWayBinding, DynamicStyling, Directive, CommonModule, FormsModule, BasicForm, ReactiveFormsModule, AdvancedForm, TemplateDriven, UserCard,

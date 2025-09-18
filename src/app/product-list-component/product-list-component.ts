@@ -7,18 +7,22 @@ import { ProductSevice } from '../services/product.service';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <h3>Product List</h3>
+    <h3>Products from API</h3>
     <ul>
-      <li *ngFor="let product of products">
-        {{ product.name }} - {{ product.price | currency:'INR' }}
-      </li>
+     <li *ngFor="let product of products">
+  {{ product.title }} - {{ product.price | currency:'USD' }}
+</li>
     </ul>
   `
 })
 export class ProductListComponent {
   products: any[] = [];
 
-  constructor(private productService: ProductSevice) {
-    this.products = this.productService.getProducts();
+  constructor(private productService: ProductSevice) {}
+    ngOnInit(): void {
+    this.productService.getProducts().subscribe((data) => {
+      this.products = data;
+       console.log('API Data:', data);
+    });
   }
 }
